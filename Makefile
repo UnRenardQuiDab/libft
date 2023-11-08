@@ -6,12 +6,12 @@
 #    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2023/11/06 17:50:25 by bwisniew         ###   ########.fr        #
+#    Updated: 2023/11/07 16:37:27 by bwisniew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -std=c99
+CFLAGS=-Wall -Wextra -Werror -g3
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 INCLUDE=libft.h

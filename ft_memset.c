@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 18:58:35 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 08:46:03 by bwisniew         ###   ########.fr       */
+/*   Created: 2023/11/07 08:46:16 by bwisniew          #+#    #+#             */
+/*   Updated: 2023/11/07 16:14:31 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (c >= 32 && c <= 126);
+	unsigned char	*mem;
+	size_t			i;
+
+	mem = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+		mem[i++] = c;
+	return (s);
 }

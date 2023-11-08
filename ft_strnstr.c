@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 18:58:35 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 08:46:03 by bwisniew         ###   ########.fr       */
+/*   Created: 2023/11/07 17:30:24 by bwisniew          #+#    #+#             */
+/*   Updated: 2023/11/08 08:38:52 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	return (c >= 32 && c <= 126);
+	size_t	i;
+	size_t	j;
+
+	if (!*little)
+		return ((char *)big);
+	i = 0;
+	while (big[i] && i < len)
+	{
+		j = 0;
+		while (little[j] && big[i + j] == little[j] && i + j < len)
+			j++;
+		if (j == ft_strlen(little))
+			return ((char *)big + i);
+		i++;
+	}
+	return (0);
 }

@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 18:58:35 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 08:46:03 by bwisniew         ###   ########.fr       */
+/*   Created: 2023/11/07 15:42:26 by bwisniew          #+#    #+#             */
+/*   Updated: 2023/11/07 16:39:35 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	return (c >= 32 && c <= 126);
+	unsigned char	*src;
+
+	src = (unsigned char *)s;
+	while (src < (unsigned char *)s + n)
+	{
+		if (*src == (unsigned char)c)
+			return ((void *)src);
+		src++;
+	}
+	return (0);
 }
