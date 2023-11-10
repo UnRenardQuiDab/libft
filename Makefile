@@ -6,12 +6,14 @@
 #    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2023/11/09 17:18:56 by bwisniew         ###   ########.fr        #
+#    Updated: 2023/11/10 11:06:48 by bwisniew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -g3
+C_FLAGS=-Wall -Wextra -Werror -g3
+LIBC=ar
+LIBC_FLAG=crs 
 SRC=ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
@@ -63,13 +65,13 @@ NAME=libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar crs $(NAME) $(OBJ)
+	$(LIBC) $(LIBC_FLAG) $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I $(INCLUDE) -c -o $@ $<
+	$(CC) $(C_FLAGS) -I $(INCLUDE) -c -o $@ $<
 
-bonus:
-	$(MAKE) $(NAME) SRC="$(SRC) $(SRC_BONUS)"
+bonus: $(OBJ) $(OBJ_BONUS)
+	$(LIBC) $(LIBC_FLAG) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 clean:
 	rm -f $(OBJ)
@@ -79,3 +81,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
+
+.PHONY: all bonus clean fclean re

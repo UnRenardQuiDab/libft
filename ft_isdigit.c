@@ -6,11 +6,9 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:37:53 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/06 18:43:10 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 09:51:57 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

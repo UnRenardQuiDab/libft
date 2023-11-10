@@ -6,11 +6,9 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:25:16 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 11:37:44 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:18:24 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:42:26 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 16:39:35 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:15:41 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

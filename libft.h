@@ -6,18 +6,14 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:54:44 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/09 18:05:26 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:31:27 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stdio.h>
-# include <stdint.h>
 
 typedef struct s_list
 {

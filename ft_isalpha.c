@@ -6,11 +6,9 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:32:01 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/06 17:41:16 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 09:51:51 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

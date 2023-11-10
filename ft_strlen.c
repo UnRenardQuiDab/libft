@@ -6,11 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 08:39:53 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 16:15:34 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:17:42 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s)
 {

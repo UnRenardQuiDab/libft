@@ -6,11 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:06:54 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/08 09:56:30 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:15:37 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,9 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:58:35 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/07 08:46:03 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 09:52:02 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

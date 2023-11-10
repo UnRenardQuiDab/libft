@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:08:20 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/08 13:03:13 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:17:08 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

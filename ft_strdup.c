@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:19:30 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/08 10:35:54 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:00:55 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 char	*ft_strdup(const char *s)
 {
