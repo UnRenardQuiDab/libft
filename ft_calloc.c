@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:05:16 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/10 10:10:32 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:58:58 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 #include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)

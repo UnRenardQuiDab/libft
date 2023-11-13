@@ -6,11 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 09:18:20 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/10 10:15:45 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:01:05 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

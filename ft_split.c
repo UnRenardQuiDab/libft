@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:26:00 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/10 10:16:21 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:01:36 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_count_word(char const *s, char c)
 {

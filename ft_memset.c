@@ -6,11 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 08:46:16 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/10 10:16:05 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:01:16 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

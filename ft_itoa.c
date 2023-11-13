@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 09:40:18 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/10 10:10:47 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:59:46 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_get_length(int n)
 {

@@ -6,11 +6,12 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:05:16 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/08 15:17:37 by bwisniew         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:04:38 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_isset(char c, char *set)
 {

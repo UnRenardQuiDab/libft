@@ -6,12 +6,12 @@
 #    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2023/11/10 11:06:48 by bwisniew         ###   ########.fr        #
+#    Updated: 2023/11/13 12:52:01 by bwisniew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-C_FLAGS=-Wall -Wextra -Werror -g3
+C_FLAGS=-Wall -Wextra -Werror -MMD -MP
 LIBC=ar
 LIBC_FLAG=crs 
 SRC=ft_atoi.c \
@@ -48,34 +48,41 @@ ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
 ft_toupper.c
-SRC_BONUS=ft_lstnew.c \
-ft_lstadd_front.c \
-ft_lstsize.c \
-ft_lstlast.c \
-ft_lstadd_back.c \
-ft_lstdelone.c \
-ft_lstclear.c \
-ft_lstiter.c \
-ft_lstmap.c
-OBJ=$(SRC:.c=.o)
-OBJ_BONUS=$(SRC_BONUS:.c=.o)
+SRC_BONUS=ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstmap_bonus.c
+OUTDIR=output
+OBJ=$(SRC:%.c=${OUTDIR}/%.o)
+OBJ_BONUS=$(SRC_BONUS:%.c=${OUTDIR}/%.o)
+DEP=$(OBJ:.o=.d)
+DEP_BONUS=$(OBJ_BONUS:.o=.d)
 INCLUDE=/libft.h
 NAME=libft.a
 
 all: $(NAME)
 
+-include ${DEP} ${DEP_BONUS}
+
 $(NAME): $(OBJ)
 	$(LIBC) $(LIBC_FLAG) $(NAME) $(OBJ)
 
-%.o: %.c
+${OUTDIR}/%.o: %.c | ${OUTDIR}
 	$(CC) $(C_FLAGS) -I $(INCLUDE) -c -o $@ $<
 
 bonus: $(OBJ) $(OBJ_BONUS)
-	$(LIBC) $(LIBC_FLAG) $(NAME) $(OBJ) $(OBJ_BONUS)
+	${MAKE} ${NAME} SRC="${SRC} ${SRC_BONUS}"
+
+${OUTDIR}:
+	mkdir -p $@
 
 clean:
-	rm -f $(OBJ)
-	rm -f $(OBJ_BONUS)
+	rm -rf ${OUTDIR}
 
 fclean: clean
 	rm -f $(NAME)
