@@ -6,7 +6,7 @@
 #    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2024/01/18 15:13:11 by bwisniew         ###   ########.fr        #
+#    Updated: 2024/01/18 15:49:21 by bwisniew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,4 +52,4 @@ fclean: clean
 
 re: fclean $(NAME)
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
