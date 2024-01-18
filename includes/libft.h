@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:54:44 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/13 12:57:07 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:06:54 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_lstsize(t_list *lst);
+int		ft_putchar(char c);
+int		ft_putptr(unsigned long long addr);
+int		ft_putstr(char *str);
+int		ft_putnbr_base(long nbr, char *base);
+int		ft_putptr(unsigned long long addr);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
