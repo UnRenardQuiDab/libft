@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2024/01/18 15:49:21 by bwisniew         ###   ########.fr        #
+#    Updated: 2024/03/10 21:04:06 by lcottet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_printf.c \
 		ft_convert.c ft_putnbr_base.c ft_putptr.c ft_putchar.c ft_putstr.c \
-		get_next_line.c get_next_line_utils.c
+		get_next_line.c get_next_line_utils.c ft_freesplit.c
 OUTDIR=obj
 OBJ=$(SRC:%.c=$(OUTDIR)/%.o)
 DEP=$(OBJ:.o=.d)
