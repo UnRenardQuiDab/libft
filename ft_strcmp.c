@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:40:16 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/14 18:43:01 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:46:47 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strcmp(char *s1, char *s2)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] != s2[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
 }
