@@ -6,18 +6,11 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 08:40:55 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/08 09:54:15 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:42:11 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= 9 && c <= 13))
-		return (1);
-	return (0);
-}
 
 static long	ft_getnb(const char *nptr, char sign, size_t i)
 {
