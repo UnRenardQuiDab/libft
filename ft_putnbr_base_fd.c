@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 15:49:09 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/21 19:15:41 by lcottet          ###   ########.fr       */
+/*   Created: 2024/03/21 19:24:44 by lcottet           #+#    #+#             */
+/*   Updated: 2024/03/21 19:26:01 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(long nbr, char *base)
+int	ft_putnbr_base_fd(long nbr, char *base, int fd)
 {
 	long	base_len;
 	int		count;
@@ -22,18 +22,18 @@ int	ft_putnbr_base(long nbr, char *base)
 	base_len = (long)ft_strlen(base);
 	if (nbr < 0)
 	{
-		count = ft_putchar('-');
+		count = ft_putchar_fd('-', fd);
 		if (count < 0)
 			return (count);
 	}
 	if (nbr <= -base_len || nbr >= base_len)
 	{
-		result = ft_putnbr_base(((nbr >= 0) * 2 - 1) * (nbr / base_len), base);
+		result = ft_putnbr_base_fd(((nbr >= 0) * 2 - 1) * (nbr / base_len), base, fd);
 		if (result < 0)
 			return (-1);
 		count += result;
 	}
-	result = ft_putchar(base[((nbr >= 0) * 2 - 1) * (nbr % base_len)]);
+	result = ft_putchar_fd(base[((nbr >= 0) * 2 - 1) * (nbr % base_len)], fd);
 	if (result < 0)
 		return (result);
 	count++;

@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:54:44 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/19 16:42:11 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:28:50 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,16 @@ int		ft_putchar(char c);
 int		ft_putptr(unsigned long long addr);
 int		ft_putstr(char *str);
 int		ft_putnbr_base(long nbr, char *base);
+int		ft_putnbr_base_fd(long nbr, char *base, int fd);
 int		ft_putptr(unsigned long long addr);
+int		ft_putptr_fd(unsigned long long addr, int fd);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_lstadd_front(t_list **lst, t_list *new);

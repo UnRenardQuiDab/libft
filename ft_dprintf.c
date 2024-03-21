@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 13:47:09 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/21 19:17:04 by lcottet          ###   ########.fr       */
+/*   Created: 2024/03/21 19:17:20 by lcottet           #+#    #+#             */
+/*   Updated: 2024/03/21 19:18:02 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stddef.h>
 
-int	ft_printf(const char *s, ...)
+int	ft_dprintf(int fd, const char *s, ...)
 {
 	va_list	args;
 	int		count;
@@ -26,9 +26,9 @@ int	ft_printf(const char *s, ...)
 	while (*str)
 	{
 		if (*str == '%')
-			result = ft_convert(args, ++str);
+			result = ft_convert_fd(fd, args, ++str);
 		else
-			result = ft_putchar(*str);
+			result = ft_putchar_fd(*str, fd);
 		if (result < 0)
 		{
 			va_end(args);
@@ -40,3 +40,4 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (count);
 }
+

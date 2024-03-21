@@ -6,20 +6,19 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:34:30 by bwisniew          #+#    #+#             */
-/*   Updated: 2023/11/09 12:39:33 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/21 19:24:04 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *str, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (!str)
+		return (ft_putstr_fd("(null)", fd));
+	if (write(fd, str, ft_strlen(str)) < 0)
+		return (-1);
+	return ((int)ft_strlen(str));
 }
+
