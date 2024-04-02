@@ -6,11 +6,14 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:18:49 by lcottet           #+#    #+#             */
-/*   Updated: 2024/03/21 19:28:10 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/04/02 08:57:44 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+#define HEX "0123456789abcdef"
+#define HEX_CAPS "0123456789ABCDEF"
 
 static int	ft_no_flag_fd(int fd, char c)
 {
@@ -36,9 +39,9 @@ int	ft_convert_fd(int fd, va_list args, char *str)
 	else if (*str == 'u')
 		count = ft_putnbr_base_fd(va_arg(args, unsigned int), "0123456789", fd);
 	else if (*str == 'x')
-		count = ft_putnbr_base_fd(va_arg(args, unsigned int), "0123456789abcdef", fd);
+		count = ft_putnbr_base_fd(va_arg(args, unsigned int), HEX, fd);
 	else if (*str == 'X')
-		count = ft_putnbr_base_fd(va_arg(args, unsigned int), "0123456789ABCDEF", fd);
+		count = ft_putnbr_base_fd(va_arg(args, unsigned int), HEX_CAPS, fd);
 	else if (*str == 'p')
 		count = ft_putptr_fd(va_arg(args, unsigned long long), fd);
 	else if (*str == '\0')

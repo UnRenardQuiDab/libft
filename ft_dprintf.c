@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:17:20 by lcottet           #+#    #+#             */
-/*   Updated: 2024/03/21 19:18:02 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/04/02 08:56:40 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ int	ft_dprintf(int fd, const char *s, ...)
 	va_end(args);
 	return (count);
 }
-

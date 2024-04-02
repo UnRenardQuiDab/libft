@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:34:30 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/21 19:24:04 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/04/02 08:58:00 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ int	ft_putstr_fd(char *str, int fd)
 		return (-1);
 	return ((int)ft_strlen(str));
 }
-

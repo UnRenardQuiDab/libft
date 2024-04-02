@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:24:44 by lcottet           #+#    #+#             */
-/*   Updated: 2024/03/21 19:26:01 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/04/02 08:58:31 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	ft_putnbr_base_fd(long nbr, char *base, int fd)
 	}
 	if (nbr <= -base_len || nbr >= base_len)
 	{
-		result = ft_putnbr_base_fd(((nbr >= 0) * 2 - 1) * (nbr / base_len), base, fd);
+		result = ft_putnbr_base_fd(((nbr >= 0) * 2 - 1) * (nbr / base_len),
+				base, fd);
 		if (result < 0)
 			return (-1);
 		count += result;
