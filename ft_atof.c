@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:58:25 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/05/06 18:33:14 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/05/07 13:54:07 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static size_t	ft_strdigitlen_pow(const char *str)
 {
 	size_t	i;
 	size_t	power;
+
 	i = 0;
 	power = 1;
 	while (ft_isdigit(str[i]))
@@ -48,10 +49,11 @@ static double	ft_getnb(const char *nptr, char sign, size_t i, bool is_decimal)
 	(void) is_decimal;
 	if (nptr[i] != '.' || is_decimal)
 		return (nb);
-	return (nb + ft_getnb(nptr, 1, i + 1, true) / (double)ft_strdigitlen_pow(nptr + i + 1));
+	return (nb + ft_getnb(nptr, 1, i + 1, true) \
+		/ (double) ft_strdigitlen_pow(nptr + i + 1));
 }
 
-double ft_atof(const char *nptr)
+double	ft_atof(const char *nptr)
 {
 	size_t	i;
 	char	sign;
