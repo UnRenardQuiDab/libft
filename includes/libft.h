@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:54:44 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/05/07 13:54:51 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/05/11 06:55:49 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -47,6 +48,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_arrlen(void *arr, size_t len);
+bool	ft_istolerated(const float a, const float b, const float tolerance);
 double	ft_atof(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

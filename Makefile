@@ -6,7 +6,7 @@
 #    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2024/05/06 18:57:23 by bwisniew         ###   ########.fr        #
+#    Updated: 2024/05/11 06:55:38 by bwisniew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_convert.c ft_putnbr_base.c ft_putptr.c ft_putchar.c ft_putstr.c \
 		get_next_line.c get_next_line_utils.c ft_freesplit.c ft_strcmp.c \
 		ft_isspace.c ft_dprintf.c ft_convert_fd.c ft_putnbr_base_fd.c \
-		ft_putptr_fd.c ft_atof.c ft_arrlen.c
+		ft_putptr_fd.c ft_atof.c ft_arrlen.c ft_istolerated.c
 OUTDIR=obj
 OBJ=$(SRC:%.c=$(OUTDIR)/%.o)
 DEP=$(OBJ:.o=.d)
