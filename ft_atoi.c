@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 08:40:55 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/09/06 21:19:41 by lcottet          ###   ########lyon.fr   */
+/*   Updated: 2024/09/06 21:28:05 by lcottet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 static long	ft_getnb(const char *nptr, char sign, size_t i)
 {
-	long	nb;
+	int	nb;
 
 	nb = 0;
 	while (ft_isdigit(nptr[i]))
 	{
-		if (nb != (nb * 10 + nptr[i] - 48) / 10)
+		if (nb * sign != (nb * sign * 10 + nptr[i] - 48) / 10)
 		{
 			errno = ERANGE;
 			if (sign == 1)
