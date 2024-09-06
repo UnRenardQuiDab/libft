@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 08:40:55 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/19 16:42:11 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/09/06 21:19:41 by lcottet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <errno.h>
 
 static long	ft_getnb(const char *nptr, char sign, size_t i)
 {
@@ -21,6 +22,7 @@ static long	ft_getnb(const char *nptr, char sign, size_t i)
 	{
 		if (nb != (nb * 10 + nptr[i] - 48) / 10)
 		{
+			errno = ERANGE;
 			if (sign == 1)
 				return (-1);
 			else
