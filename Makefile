@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:41:39 by bwisniew          #+#    #+#              #
-#    Updated: 2024/05/11 06:55:38 by bwisniew         ###   ########.fr        #
+#    Updated: 2024/09/08 20:24:19 by lcottet          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-C_FLAGS=-Wall -Wextra -Werror -MMD -MP -g3
+C_FLAGS=-Wall -Wextra -Werror -MMD -MP -Ofast
 LIBC=ar
 LIBC_FLAG=crs 
 SRC=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
