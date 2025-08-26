@@ -49,7 +49,7 @@ static double	ft_getnb(const char *nptr, char sign, size_t i, bool is_decimal)
 	(void) is_decimal;
 	if (nptr[i] != '.' || is_decimal)
 		return (nb);
-	return (nb + ft_getnb(nptr, 1, i + 1, true) \
+	return (nb + ft_getnb(nptr, 1, i + 1, true)
 		/ (double) ft_strdigitlen_pow(nptr + i + 1));
 }
 
